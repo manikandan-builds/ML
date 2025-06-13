@@ -1,0 +1,36 @@
+git status -- used to check the status of the working directory and staging area
+git add -- used to add changes in the working directory to the staging area
+git commit -m "message" -- used to commit changes in the staging area to the repository with a message
+git restore --staged <file> -- used to unstage a file, removing it from the staging area
+git restore <file> -- Restores the file in the working directory from the last commit, Discards all uncommitted changes in that file (dangerous if not careful!)
+git log -- used to view the commit history
+
+git diff -- used to show differences between files in the working directory and the staging area, or between commits`
+
+| Command                        | Shows differences between...                                   |
+| ------------------------------ | -------------------------------------------------------------- |
+| `git diff`                     | Working directory ↔ Staging area (unstaged changes)            |
+| `git diff --staged`            | Staging area ↔ Last commit (staged but not yet committed)      |
+| `git diff HEAD`                | Working directory ↔ Last commit (everything since last commit) |
+| `git diff <commit1> <commit2>` | Two specific commits                                           |
+| `git diff <branch1> <branch2>` | Differences between branches                                   |
+
+git reset <commit> -- used to reset the current branch to a specific commit, optionally modifying the staging area and working directory
+git stash -- used to temporarily save changes in the working directory that are not ready to be committed
+git stash pop -- used to apply the most recent stashed changes and remove them from the stash
+git stash clear -- used to remove all stashed changes 
+git remote add origin <url> -- used to add a remote repository with the name "origin"
+git remote -v -- used to list all remote repositories and their URLs
+git remote add upstream <url> -- used to add a remote repository with the name "upstream"
+git fetch upstream -- used to fetch changes from the upstream remote repository
+git push origin <branch> -- used to push changes from the local branch to the remote repository
+git pull origin <branch> -- used to fetch changes from the remote repository and merge them into the local branch
+git branch -- used to list, create, or delete branches
+git branch <branch> -- used to create a new branch
+git checkout <branch> -- used to switch to a different branch
+git merge <branch> -- used to merge changes from another branch into the current branch
+git clone <url> -- used to create a local copy of a remote repository
+git remote add upstream <url> -- used to add a remote repository with the name "upstream"
+git fetch upstream -- used to fetch changes from the upstream remote repository
+git pull upstream <branch> -- used to fetch changes from the upstream remote repository and merge them into the current branch
+git rebase <branch> -- used to reapply commits on top of another base branch, useful for keeping a clean commit history
